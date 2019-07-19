@@ -20,13 +20,18 @@ class UserController extends Controller
         return $this->_user->register($request);
     }
 
-    public function login()
+    public function login(Request $request)
     {
-
+        return $this->_user->login($request);
     }
 
-    public function details()
+    public function logout(Request $request)
     {
+        return $this->_user->logout($request);
+    }
 
+    public function show(Request $request)
+    {
+        return $this->_user->user($request);
     }
 }

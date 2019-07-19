@@ -47,4 +47,13 @@ class User extends Authenticatable
             'password_confirmation' => 'required|same:password',
         ];
     }
+
+    public function rulesLoginUser()
+    {
+        return [
+            'email' => 'required|email',
+            'password' => 'required|min:5',
+            'remember_me' => 'boolean'
+        ];
+    }
 }
