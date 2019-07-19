@@ -166,6 +166,9 @@ return [
          * Package Service Providers...
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        //TODO:@passport
+        //Laravel\Passport\PassportServiceProvider::class, # version 5.8 don't need
+
 
         /*
          * Application Service Providers...

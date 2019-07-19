@@ -37,4 +37,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function rulesCreateUser()
+    {
+        return [
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:5',
+            'password_confirmation' => 'required|same:password',
+        ];
+    }
 }
